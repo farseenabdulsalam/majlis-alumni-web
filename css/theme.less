@@ -1,0 +1,27 @@
+@c-font-heading: "Lobster";
+@c-font-body: "Open Sans";
+
+@c-color-main: #F44336;
+@c-color-headlines: #B71C1C;
+
+@import url('https://fonts.googleapis.com/css?family=@{c-font-heading}|@{c-font-body}');
+
+body {
+  font-family: @c-font-body;
+}
+
+h1, h2 {
+  font-family: @c-font-heading;
+  font-weight: normal;
+}
+
+header {
+  background-color: @c-color-main;
+  color: white;
+}
+
+h1,h2 {
+  color: @c-color-headlines;
+}
+
+
