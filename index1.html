@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Majlis Alumni Meetup 2017</title>
+		<style type='text/css'>
+			html, body { height: 100%;}
+			body {
+				background-image: url('majlis_home.jpg');
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-attachment: fixed;
+				margin: 0;
+			}
+			div {
+				padding: 2em;
+			}
+
+			#top_div {
+				background-color: rgba(0,0,0,0.8);
+				height: 100%;
+				color: #ffffff;
+				justify-content: center;
+				align-items: center;
+				display:flex;
+				text-align: center;
+			}
+			#top_div ul li {
+				list-style-type: none;
+			}
+
+			#top_content, #vote_content {
+				font-family:  'Droid Sans', 'Trebuchet MS', sans; 
+				margin: 2em;
+				font-size: 1em;
+				font-weight: normal;
+				max-width: 600px;
+				line-height: 1.5em;
+			}
+			#vote_content {
+				margin: 0;
+				padding: 0.8em;
+			}
+
+			#page_title, #vote_heading {
+				font-family: 'Lobster', cursive;
+				text-align: center;
+				font-weight: normal;
+				font-size: 5em;
+				margin: 0.1em;
+			}
+			#vote_heading {
+				text-align: left;
+			}
+			#page_title_2 {
+				font-family: 'Bellefair', serif;
+				text-align: center;
+				font-weight: normal;
+				font-size: 2em;
+				margin: 0.1em;
+			}
+			#content_div {
+				background-color: #eeeeee;
+			}
+		</style>
+		<link href="https://fonts.googleapis.com/css?family=Bellefair|Lobster" rel="stylesheet">
+	</head>
+	<body>
+		<div id=top_div>
+			<ul>
+				<li><h1 id=page_title> Majlis</h1></li>
+				<li><h2 id=page_title_2>Alumni Meetup 2017 </h2></li>
+				<li id=top_content>
+				Majlis PTA is thinking about sponsoring a grand meetup of Majlis Alumnis.
+				All alumnis of Majlis English Medium School, boys and girls, ladies and gentlemen,
+				will be personally invited to ensure maximum participation.
+				Majlis played an important role in shaping us.
+				!TODO! Fill in Here
+				</li>
+			</ul>
+		</div>
+		<div id=content_div>
+			<h1 id=vote_heading>Suggest dates</h1>
+			<div id=vote_content>
+			Please suggest some dates which will be convenient for you to conduct the meetup.
+			<br><br>
+			<form action='index.html' method=POST>
+				Name: <br>
+				<input type=text name=name> <br><br>
+				Batch: <br>
+				<input type=text name=batch> <br><br>
+				Convenient Dates:<br>
+				<textarea name=dates cols=25></textarea><br>
+				<small> Type month&lt;value&gt;date seperated by cmmma.<br>
+					Omit the date if suggesting all days in a month</small><br>
+				<small> Example: aug 12, dec 14, sep, nov 14 </small><br>
+				<br><br>
+				<input type=submit value=Submit>
+			</form>
+			</div>
+		</div>
