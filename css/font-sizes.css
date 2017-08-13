@@ -1,0 +1,30 @@
+/*
+ * Note:
+ *  Relative font scaling is inconsistent across devices
+ */
+
+body {
+  font-size: 23pt;
+  line-height: 1.4em;
+}
+h1 {
+  font-size: 4.3em;
+}
+
+h2 {
+  font-size: 3.1em;
+}
+
+
+@media (max-resolution: 120dpi) {
+  body {
+    font-size: 14pt;
+  }
+  h1 {
+    font-size: 3.2em;
+  }
+  h2 {
+    font-size: 2.1em;
+  }
+}
+
