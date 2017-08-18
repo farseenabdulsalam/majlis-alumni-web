@@ -1,5 +1,5 @@
-@c-font-heading: "Lobster";
-@c-font-body: "Open Sans";
+@c-font-heading: "Raleway";
+@c-font-body: "Gentium Basic";
 
 @c-color-main: #F44336;
 @c-color-headlines: #B71C1C;
@@ -13,6 +13,7 @@ body {
 h1, h2 {
   font-family: @c-font-heading;
   font-weight: normal;
+  color: @c-color-headlines;
 }
 
 header {
@@ -20,8 +21,35 @@ header {
   color: white;
 }
 
-h1,h2 {
-  color: @c-color-headlines;
+header, section {
+  padding: 2rem;
 }
 
+p {
+  text-align: justify;
+  code {
+    font-size: 0.8em;
+  }
+}
 
+input, textarea {
+  width: 100%;
+}
+
+form {
+  display: block;
+  max-width:20em;
+  label {
+    display: block;
+    padding-top: 1em;
+    padding-bottom: 0.3em;
+  }
+  input {
+    height: 2.4em;
+  }
+  input[type="submit"] {
+    margin-top: 2em;
+    float: right;
+    max-width: 10em;
+  }
+}
