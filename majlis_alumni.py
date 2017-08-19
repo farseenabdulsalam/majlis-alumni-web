@@ -1,6 +1,6 @@
 import os
 import psycopg2
-import urlparse
+from urllib import parse as urlparse
 from flask import Flask, render_template, send_from_directory, request, redirect, url_for
 app = Flask(__name__)
 
@@ -35,7 +35,7 @@ def suggest_dates():
     conn = connect_db()
     cur = conn.cursor()
     data = (request.form['name'],request.form['year'],request.form['dates'])
-    cur.execute('INSERT INTO date_suggestions (name,batch,dates) VALUES (?,?,?)',data)
+    cur.execute('INSERT INTO date_suggestions (name,batch,dates) VALUES (%s,%s,%s)',data)
     conn.commit()
     conn.close()
     return send_from_directory('.','thanks.html')
@@ -48,13 +48,13 @@ def suggest_programs():
     conn = connect_db()
     cur = conn.cursor()
     data = (request.form['name'],request.form['year'],request.form['datas'])
-    cur.execute('INSERT INTO programs_suggestions (name,batch,programs) VALUES (?,?,?)',data)
+    cur.execute('INSERT INTO programs_suggestions (name,batch,programs) VALUES (%s,%s,%s)',data)
     conn.commit()
     conn.close()
     return send_from_directory('.','thanks.html')
 
 @app.route('/attendance',methods=['POST'])
-def suggest_programs():
+def attendance():
     if request.method != 'POST' or \
        not request.form['name'] or \
        not request.form['year']:
@@ -62,7 +62,7 @@ def suggest_programs():
     conn = connect_db()
     cur = conn.cursor()
     data = (request.form['name'],request.form['year'],request.form['okay'])
-    cur.execute('INSERT INTO attendance (name,batch,okay) VALUES (?,?,?)',data)
+    cur.execute('INSERT INTO attendance (name,batch,okay) VALUES (%s,%s,%s)',data)
     conn.commit()
     conn.close()
     return send_from_directory('.','thanks.html')
