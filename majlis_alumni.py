@@ -1,19 +1,18 @@
 import os
-import sqlite3
+import psycopg2
+import urlparse
 from flask import Flask, render_template, send_from_directory, request, redirect, url_for
 app = Flask(__name__)
 
-# Load default config and override config from an environment variable
-app.config.update(dict(DATABASE=os.path.join(app.root_path,
-                                              'majlis_alumni.db'),
-                       SECRET_KEY='development key', USERNAME='admin',
-                       PASSWORD='default'))
-
 def connect_db():
     """Connects to the specific database."""
-    rv = sqlite3.connect(app.config['DATABASE'])
-    rv.row_factory = sqlite3.Row
-    return rv
+    urlparse.uses_netloc.append("postgres")
+    url = urlparse.urlparse(os.environ["DATABASE_URL"])
+    conn = psycopg2.connect(database=url.path[1:],
+                     user=url.username,
+                     password=url.password,
+                     host=url.hostname, port=url.port ) 
+    return conn
 
 @app.route('/')
 def home():
