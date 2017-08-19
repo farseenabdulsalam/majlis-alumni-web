@@ -53,3 +53,17 @@ def suggest_programs():
     conn.close()
     return send_from_directory('.','thanks.html')
 
+@app.route('/attendance',methods=['POST'])
+def suggest_programs():
+    if request.method != 'POST' or \
+       not request.form['name'] or \
+       not request.form['year']:
+        return redirect(url_for('home'))
+    conn = connect_db()
+    cur = conn.cursor()
+    data = (request.form['name'],request.form['year'],request.form['okay'])
+    cur.execute('INSERT INTO attendance (name,batch,okay) VALUES (?,?,?)',data)
+    conn.commit()
+    conn.close()
+    return send_from_directory('.','thanks.html')
+
