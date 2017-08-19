@@ -59,18 +59,32 @@
     <p>Currently suggested date is September 9th Second Saturday.</p>
     <p>You may also suggest any date you are convenient with.</p>
   </section>
-  <section id="vote_dates">
+  <section id="vote_date">
+    <h2>Are you okay with september 9th?</h2>
+    <p>Please let us know whether you are okay with the suggested date.</p>
+    <form method=POST action='/attendance'>
+        <label for=form_vd_name>Name</label>
+        <input type=text name=name id=form_vd_name>
+        <label for=form_vd_year>Pass out year</label>
+        <input type=text name=year id=form_vd_name>
+        <h3>Are you okay?</h3>
+        <input type=submit name=okay value="Yes">
+        <input type=submit name=okay value="No">
+      </div>
+   </form>
+  </section>
+  <section id="suggest_dates">
     <h2>Have your say</h2>
     <p>Please suggest the dates convenient to you in the following form.</p>
     <p>Format: Month&lt;space&gt;xx-xx. <br>Use comma to enter more dates. <br>
     Example: <code>September 1-10, August 25-31, December 1-31</code></p>
     <form method=POST action='/suggest/dates'>
-        <label for=form_vd_name>Name</label>
-        <input type=text name=name id=form_vd_name>
-        <label for=form_vd_year>Pass out year</label>
-        <input type=text name=year id=form_vd_name>
-        <label for=form_vd_dates>Available dates</label>
-        <textarea name=dates id=form_vd_dates></textarea>
+        <label for=form_sd_name>Name</label>
+        <input type=text name=name id=form_sd_name>
+        <label for=form_sd_year>Pass out year</label>
+        <input type=text name=year id=form_sd_name>
+        <label for=form_sd_dates>Available dates</label>
+        <textarea name=dates id=form_sd_dates></textarea>
         <input type=submit>
       </div>
    </form>
