@@ -75,7 +75,7 @@
     <p>Please suggest the dates convenient to you in the following form.</p>
     <p>Format: Month&lt;space&gt;xx-xx. <br>Use comma to enter more dates. <br>
     Example: <code>September 1-10, August 25-31, December 1-31</code></p>
-    <form>
+    <form method=POST action='/suggest/dates'>
         <label for=form_vd_name>Name</label>
         <input type=text name=name id=form_vd_name>
         <label for=form_vd_year>Pass out year</label>
@@ -91,7 +91,7 @@
     <p>We want to make sure that this meet is up to the expectation of everyone
     of us. Please tell us something you'd like to add to this meet.</p>
     <p><small>Name and details are optional</small></p>
-    <form>
+    <form method=POST action='/suggest/programs'>
         <label for=form_pg_name>Name</label>
         <input type=text name=name id=form_pg_name>
         <label for=form_pg_year>Pass out year</label>
