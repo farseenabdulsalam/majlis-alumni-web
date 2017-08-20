@@ -21,8 +21,8 @@
     <code>
       <small>noun.</small>
       /ma'dʒliʃiəns/
+      <p>Proud students of Majlis, who lives to pass on the flambeu of passion.</p>
     </code>
-    <p>Proud students of Majlis</p>
   </header>
   <section>
     <p>Every monsoon, along with its soft smell of soil brings with it a bag of
@@ -67,41 +67,44 @@
     to organize a meet up a few years ago. But it was not up to our
     expectations due to lack of participation. This year we are planning it to
     make it as vivid as possible by including as much of you as possible. </p>
-    <h3>We need your help</h3>
-    <p>We need your help to find out a date convenient to as many of us as
-    possible  Because this is our meet, and we are going to organize this
-    meet</p>
-    <p>Currently suggested date is September 9th Second Saturday.</p>
-    <p>You may also suggest any date you are convenient with.</p>
+    <p>We have been conducting discussions after discussions to come up with a
+    date agreeable for <em>most of us</em>. Thanks to beloved Dr. Haseeb,
+    Shareef, Akhil and Nikhil for their sincere guidance and suggestions. I
+    would also like to thank the strong support from Sahal, Ramsheer and
+    Basith. Huge thanks goes to Thufail, Shamil and Sithara, who had put great
+    efforts to reach their fellow majlisians to spread the news and get
+    suggestions.</p>
   </section>
-  <section id="vote_date">
-    <h2>Are you okay with september 9th?</h2>
-    <p>Please let us know whether you are okay with the suggested date.</p>
-    <form method=POST action='/attendance'>
-        <label for=form_vd_name>Name</label>
-        <input type=text name=name id=form_vd_name>
-        <label for=form_vd_year>Pass out year</label>
-        <input type=text name=year id=form_vd_name>
-        <h3>Are you okay?</h3>
-        <input type=submit name=okay value="Yes">
-        <input type=submit name=okay value="No">
-      </div>
-   </form>
-  </section>
-  <section id="suggest_dates">
-    <h2>Have your say</h2>
-    <p>Please suggest the dates convenient to you in the following form.</p>
-    <p>Format: Month&lt;space&gt;xx-xx. <br>Use comma to enter more dates. <br>
-    Example: <code>September 1-10, August 25-31, December 1-31</code></p>
-    <form method=POST action='/suggest/dates'>
-        <label for=form_sd_name>Name</label>
-        <input type=text name=name id=form_sd_name>
-        <label for=form_sd_year>Pass out year</label>
-        <input type=text name=year id=form_sd_name>
-        <label for=form_sd_dates>Available dates</label>
-        <textarea name=dates id=form_sd_dates></textarea>
+  <section id="registration">
+    <h2>When is the meet?</h2>
+    <p>The meet is on! The PTA association is funding the meet.  We are
+    positive that this will be something unprecedented in the history of
+    Majlis.</p> <p>Unfortunately, despite many efforts by humble
+    author of the page and tireless minds among our alumnis, we could not reach
+    a date acceptable to most of us.</p>
+    <p>The main purpose of this registration is to let the technology handle
+    the task of choosing a date convenient for as many as possible. Please
+    enter all the dates you think you will be convenient for you.</p>
+    <p>You can always enter more dates by registering multiple times. The
+    software will intelligently merge your data into one record. Make sure that
+    your name and pass out year is entered correctly.</p>
+    <h2>Registration</h2>
+    <form method=POST action='/register'>
+        <label for=reg_form_name>Name</label>
+        <input type=text name=name id=reg_form_name>
+        <label for=reg_form_year>Pass out year</label>
+        <input type=text name=year id=reg_form_name>
+        <label for=reg_form_contact>Any contact numbers<br>
+          <small>(use comma to enter more than one number)</small></label>
+        <input type=text name=contact id=reg_form_contact>
+        <label for=reg_form_dates>Available dates</label>
+        <small>
+          Format: Month&lt;space&gt;xx-xx. <br>Use comma to enter more
+          dates.<br>Example:<br> September 1-10, November 14,
+          December 1-31
+        </small>
+          <textarea name=dates id=reg_form_dates></textarea>
         <input type=submit>
-      </div>
    </form>
   </section>
   <section id="vote_programs">
