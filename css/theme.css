@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Gentium Basic');
+body {
+  font-family: "Gentium Basic";
+}
+h1,
+h2 {
+  font-family: "Raleway";
+  font-weight: normal;
+  color: #B71C1C;
+}
+header {
+  background-color: #F44336;
+  color: white;
+}
+header,
+section {
+  padding: 2em;
+}
+p {
+  text-align: justify;
+}
+p code {
+  font-size: 0.8em;
+}
+input,
+textarea {
+  width: 100%;
+}
+form {
+  display: block;
+  max-width: 20em;
+}
+form label {
+  display: block;
+  padding-top: 1em;
+  padding-bottom: 0.3em;
+  color: #B71C1C;
+}
+form input {
+  height: 2.4em;
+}
+form input[type="submit"] {
+  margin-top: 2em;
+  float: right;
+  max-width: 10em;
+}
+form textarea {
+  min-height: 10em;
+}
+section {
+  max-width: 40em;
+  margin: auto;
+}
